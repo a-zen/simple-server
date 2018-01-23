@@ -15,4 +15,5 @@ app.listen(3000, function () {
     console.log('started simple-dummy on port 3000');
 });
 
-
+// TODO: log shutdown
+// TODO: add timestamp to log?
