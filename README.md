@@ -56,6 +56,6 @@ docker build -t simple-server .
 Start the docker image with the following command:
 
 ```
-docker run -d -p 3000:3000 --name simple-server simple-server
+docker run --init -d -p 3000:3000 --name simple-server simple-server
 ```
 
