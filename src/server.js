@@ -10,7 +10,7 @@ app.get('/ping', function (req, res) {
 
 app.get('/', function (req, res) {
   counter++;
-  console.log('Received visitor request from ' + req.connection.remoteAddress 
+  console.log('Received visitor request from ' + req.connection.remoteAddress
     + ' number ' + counter);
   res.send('Hello visitor number ' + counter);
 });
@@ -19,4 +19,8 @@ app.listen(3000, function () {
     console.log('started simple-dummy on port 3000');
 });
 
-// TODO: log shutdown
+process.on('SIGTERM', function () {
+    console.info('Received SIGTERM, starting graceful shutdown');
+    process.exit(0);
+});
+
