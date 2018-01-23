@@ -1,0 +1,14 @@
+{
+  "name": "simple-dummy",
+  "version": "1.0.0",
+  "description": "simple express dummy rest service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Zenger",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
