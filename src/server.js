@@ -4,13 +4,14 @@ var app = express();
 var counter = 0;
 
 app.get('/ping', function (req, res) {
-  console.log('Received ping request from TODO');
+  console.log('Received ping request from ' + req.connection.remoteAddress);
   res.send('pong');
 });
 
 app.get('/', function (req, res) {
   counter++;
-  console.log('Received visitor request from TODO number ' + counter);
+  console.log('Received visitor request from ' + req.connection.remoteAddress 
+    + ' number ' + counter);
   res.send('Hello visitor number ' + counter);
 });
 
@@ -19,4 +20,3 @@ app.listen(3000, function () {
 });
 
 // TODO: log shutdown
-// TODO: add timestamp to log?
