@@ -16,7 +16,9 @@ npm start
 
 # Tests
 
-nothing so far
+## container test
+
+There are container tests using goss.
 
 # Resources
 
