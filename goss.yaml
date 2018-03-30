@@ -1,0 +1,25 @@
+file:
+  /app/src/server.js:
+    exists: true
+    filetype: file
+    group: root
+    mode: "0644"
+    owner: root
+command:
+  ps aux | grep server.js | grep -v grep | awk '{print $1}':
+    exit-status: 0
+    stdout:
+      - node
+    stderr: []
+    timeout: 10000 # in milliseconds
+process:
+  node:
+    running: true
+http:
+  http://localhost:3000/ping:
+    status: 200
+    allow-insecure: false
+    no-follow-redirects: false
+    timeout: 5000
+    body:
+    - pong
