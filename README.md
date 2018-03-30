@@ -39,7 +39,7 @@ curl http://localhost:3000
 
 # Logging
 
-Logs startup, shutdown and receiving of request.
+Logs startup, shutdown and receiving of request to stdout / stderr.
 
 # Docker
 
