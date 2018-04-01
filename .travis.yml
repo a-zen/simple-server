@@ -1,13 +1,12 @@
 language: node_js
 sudo: required
-
 services:
-    - docker
-
+- docker
 script:
-  - docker build -t roude/simple-server .
-
+- docker build -t roude/simple-server .
 deploy:
   provider: script
   script: bash scripts/travis_docker_deploy.sh
-
+notifications:
+  slack:
+    secure: grEGTEHgMmYAADVOHJez8Is+QQXKMgOIyC4df4KThGAX+IJW3uadoY0KsOwciFANe6tlRf+2HL9afuj7QZZlXatoVUAd4Wnk5WHHZ2lyLk/1DZPEeEH3JhgRfXTe5XzeOtlNQ1i4AznWAHfLQwmGuUkM0Y02dD3nUzqXUzzcwfcwPTiJQh/Nlh7sCUw2iDIZ8+VbjihvTNsrilRB4kwpYTRTxnm7tHhFDkME6DAcpfFpG4yDUfWM6DyuO3qTzmYpzYTzP0ppzfuDI/pzLAVWne7Q2mEsHaod2q7oBZ2VGmw7sK4PthSCaqulTTOlI9RRKECAfR2b12RWEBLkCPrYtZytykyMrBgM3zoWCPL8Qk+GZ7/EKUS3Qn2WIpshWQ6OAXY+eLRNHzZlNWfX0Nn+Wn7Q64/0HgmO4JoR2U1oWsCth8fuhF1Hv63ppytmNbNoxZAUfNxR3NUVb1TaFlaQHM8dNWCim/rhFdaQJm4qXhuUfo5hXF1BPgWB0qB5ZIHgr/CL7XIYcaWAqy5mzVJtoPwJoiyFBpSE0PBqvR17k5En7gyGEhlKrn1ZUrQ7Mkuf7ckgMPcnhOmVCA6AddgdUbSltHBjCCVXcoz9J9Hnygg7aP7gDLcoBo+lGhMsYegwrw7RfwuVXThLzC2zB4/0jed96IBuxvMSlqXg/tOvMd4=
