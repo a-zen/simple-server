@@ -4,13 +4,13 @@ A simple-dummy rest service using node.js and express
 
 ## Installation
 
-```
+```bash
 npm install
 ```
 
 ## Starting
 
-```
+```bash
 npm start
 ```
 
@@ -26,7 +26,7 @@ There are container tests using goss.
 
 Sends a 'pong' response.
 
-```
+```bash
 curl http://localhost:3000/ping
 ```
 
@@ -35,7 +35,7 @@ curl http://localhost:3000/ping
 Counts up the number of visitor seen since server start
 and responses with the number.
 
-```
+```bash
 curl http://localhost:3000
 ```
 
@@ -49,15 +49,15 @@ Logs startup, shutdown and receiving of request to stdout / stderr.
 
 Build the image from the project root with the following command:
 
-```
+```bash
 docker build -t simple-server .
 ```
 
-### Starting
+### Starting the container
 
 Start the docker image with the following command:
 
-```
+```bash
 docker run --init -d -p 3000:3000 --name simple-server simple-server
 ```
 
