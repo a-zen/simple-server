@@ -3,6 +3,8 @@
 A simple-dummy rest service using node.js and express
 
 ![Publish Docker image](https://github.com/a-zen/simple-server/workflows/Publish%20Docker%20image/badge.svg?branch=master)
+![CodeQL](https://github.com/a-zen/simple-server/workflows/CodeQL/badge.svg?branch=master)
+![Super-Linter](https://github.com/a-zen/simple-server/workflows/Super-Linter/badge.svg)
 
 ## Installation
 
