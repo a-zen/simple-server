@@ -69,5 +69,5 @@ docker run --init -d -p 3000:3000 --name simple-server simple-server
 A prebuilt docker image can be retrieved from docker hub:
 
 ```bash
-docker push roude/simple-server:latest
+docker pull roude/simple-server:latest
 ```
