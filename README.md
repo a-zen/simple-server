@@ -64,4 +64,10 @@ Start the docker image with the following command:
 ```bash
 docker run --init -d -p 3000:3000 --name simple-server simple-server
 ```
+### Prebuilt
 
+A prebuilt docker image can be retrieved from docker hub:
+
+```bash
+docker push roude/simple-server:latest
+```
