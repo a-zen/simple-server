@@ -2,27 +2,27 @@
 
 A simple-dummy rest service using node.js and express
 
-# Installation
+## Installation
 
 ```
 npm install
 ```
 
-# Starting
+## Starting
 
 ```
 npm start
 ```
 
-# Tests
+## Tests
 
-## container test
+### container test
 
 There are container tests using goss.
 
-# Resources
+## Resources
 
-## ping
+### ping
 
 Sends a 'pong' response.
 
@@ -30,7 +30,7 @@ Sends a 'pong' response.
 curl http://localhost:3000/ping
 ```
 
-## visit-counter aka root
+### visit-counter aka root
 
 Counts up the number of visitor seen since server start
 and responses with the number.
@@ -39,13 +39,13 @@ and responses with the number.
 curl http://localhost:3000
 ```
 
-# Logging
+## Logging
 
 Logs startup, shutdown and receiving of request to stdout / stderr.
 
-# Docker
+## Docker
 
-## Building
+### Building
 
 Build the image from the project root with the following command:
 
@@ -53,7 +53,7 @@ Build the image from the project root with the following command:
 docker build -t simple-server .
 ```
 
-## Starting
+### Starting
 
 Start the docker image with the following command:
 
