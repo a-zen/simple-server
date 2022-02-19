@@ -1,7 +1,7 @@
-FROM node:14
+FROM node:16-alpine
 COPY . /app
 WORKDIR /app
-RUN apt-get update && apt-get -y full-upgrade && npm install
+RUN apk upgrade --no-cache && npm install
 EXPOSE 3000
 CMD ["node","/app/src/server.js"]
 USER node
