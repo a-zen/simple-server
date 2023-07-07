@@ -5,6 +5,6 @@ in pkgs.mkShell rec {
 
   buildInputs = with pkgs; [
     nodePackages.npm
-    nodejs-slim-16_x
+    nodejs_18
   ];
 }
