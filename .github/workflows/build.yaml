@@ -1,3 +1,4 @@
+---
 name: build
 on:
   push:
@@ -23,11 +24,11 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ env.IMAGE_TAG }}
-          format:    'template'
+          format: 'template'
           exit-code: '1'
           vuln-type: 'os,library'
-          template:  '@/contrib/sarif.tpl'
-          output:    'trivy-results.sarif'
+          template: '@/contrib/sarif.tpl'
+          output: 'trivy-results.sarif'
 
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v3
