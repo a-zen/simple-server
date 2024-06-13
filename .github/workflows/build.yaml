@@ -8,11 +8,22 @@ on:
 env:
   IMAGE_TAG: docker.io/roude/simple-server:latest
 
+permissions:
+  contents: read
+
 jobs:
   build:
+    permissions:
+      contents: read  # for docker/build-push-action to read repo content
+      security-events: write  # for github/codeql-action/upload-sarif to upload SARIF results
     name: build
     runs-on: ubuntu-latest
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - name: Checkout code
         uses: actions/checkout@v4
 
