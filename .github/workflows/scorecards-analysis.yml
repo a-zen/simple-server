@@ -14,11 +14,11 @@ jobs:
   analysis:
     name: Scorecards analysis
     runs-on: ubuntu-latest
-    permissions:
-      # Needed to upload the results to code-scanning dashboard.
-      security-events: write
-      actions: read
-      contents: read
+    # permissions:
+    #   # Needed to upload the results to code-scanning dashboard.
+    #   security-events: write
+    #   actions: read
+    #   contents: read
 
     steps:
       - name: Harden Runner
