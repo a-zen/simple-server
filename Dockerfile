@@ -1,4 +1,4 @@
-FROM node:22.4.1-alpine
+FROM node:22.5.0-alpine
 COPY . /app
 WORKDIR /app
 RUN apk upgrade --no-cache && npm install
