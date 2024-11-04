@@ -13,7 +13,7 @@ jobs:
   super-lint:
     # Name the Job
     permissions:
-      contents: read  # for actions/checkout to fetch code
+      contents: read # for actions/checkout to fetch code
       # for github/super-linter/slim to mark status of each linter run
       statuses: write
     name: Lint code base
