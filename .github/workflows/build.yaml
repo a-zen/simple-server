@@ -35,10 +35,9 @@ jobs:
         uses: aquasecurity/trivy-action@18f2510ee396bbf400402947b394f2dd8c87dbb0 # master
         with:
           image-ref: ${{ env.IMAGE_TAG }}
-          format: "template"
+          format: "sarif"
           exit-code: "1"
           vuln-type: "os,library"
-          template: "@/contrib/sarif.tpl"
           output: "trivy-results.sarif"
 
       - name: Upload Trivy scan results to GitHub Security tab
