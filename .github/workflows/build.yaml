@@ -39,6 +39,7 @@ jobs:
           exit-code: "1"
           vuln-type: "os,library"
           output: "trivy-results.sarif"
+          version: "v0.58.0"
 
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@babb554ede22fd5605947329c4d04d8e7a0b8155 # v3.27.7
