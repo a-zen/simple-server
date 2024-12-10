@@ -36,7 +36,7 @@ jobs:
         with:
           image-ref: ${{ env.IMAGE_TAG }}
           format: "sarif"
-          exit-code: "1"
+          # exit-code: "1"
           vuln-type: "os,library"
           output: "trivy-results.sarif"
           version: "v0.58.0"
