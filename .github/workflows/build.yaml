@@ -32,7 +32,7 @@ jobs:
           docker build -t "$IMAGE_TAG" .
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.30.0
+        uses: aquasecurity/trivy-action@0.32.0
         with:
           image-ref: ${{ env.IMAGE_TAG }}
           format: "sarif"
