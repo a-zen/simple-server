@@ -1,4 +1,4 @@
-FROM node:24.8.0-alpine@sha256:3e843c608bb5232f39ecb2b25e41214b958b0795914707374c8acc28487dea17
+FROM node:24.9.0-alpine@sha256:5fde6e454206a7a1208046d0a4284980b9721c85459cadb7f368eef775a60811
 COPY . /app
 WORKDIR /app
 RUN apk upgrade --no-cache && npm install
