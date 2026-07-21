@@ -1,5 +1,5 @@
 file:
-  /app/src/server.js:
+  /app/server.js:
     exists: true
     filetype: file
     group: root

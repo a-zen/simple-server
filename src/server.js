@@ -1,21 +1,25 @@
-var express = require('express')
-var app = express()
+var Fastify = require('fastify')
+var app = Fastify({ logger: false })
 
 var counter = 0
 
-app.get('/ping', function (req, res) {
-  console.log('Received ping request from ' + req.connection.remoteAddress)
-  res.send('pong')
+app.get('/ping', function (req, reply) {
+  console.log('Received ping request from ' + req.ip)
+  reply.send('pong')
 })
 
-app.get('/', function (req, res) {
+app.get('/', function (req, reply) {
   counter++
-  console.log('Received visitor request from ' + req.connection.remoteAddress +
+  console.log('Received visitor request from ' + req.ip +
     ' number ' + counter)
-  res.send('Hello visitor number ' + counter)
+  reply.send('Hello visitor number ' + counter)
 })
 
-app.listen(3000, function () {
+app.listen({ port: 3000, host: '0.0.0.0' }, function (err) {
+  if (err) {
+    console.error(err)
+    process.exit(1)
+  }
   console.log('started simple-dummy on port 3000')
 })
 

@@ -1,6 +1,6 @@
 # simple-dummy
 
-A simple-dummy rest service using node.js and express
+A simple-dummy rest service using node.js and fastify
 
 ![Publish Docker image](https://github.com/a-zen/simple-server/workflows/Publish%20Docker%20image/badge.svg?branch=master)
 ![CodeQL](https://github.com/a-zen/simple-server/workflows/CodeQL/badge.svg?branch=master)
@@ -12,10 +12,24 @@ A simple-dummy rest service using node.js and express
 npm install
 ```
 
+## Building
+
+Bundle the service into a single minified file with esbuild:
+
+```bash
+npm run build
+```
+
 ## Starting
 
 ```bash
 npm start
+```
+
+Or run the esbuild bundle directly:
+
+```bash
+node dist/server.js
 ```
 
 ## Tests

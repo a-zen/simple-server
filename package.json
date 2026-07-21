@@ -1,10 +1,11 @@
 {
   "name": "simple-dummy",
   "version": "1.3.0",
-  "description": "simple express dummy rest service",
-  "main": "src/server.js",
+  "description": "simple fastify dummy rest service",
+  "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
+    "build": "esbuild src/server.js --bundle --platform=node --format=cjs --minify --outfile=dist/server.js",
     "start": "node src/server.js"
   },
   "author": "Alexander Zenger",
@@ -14,6 +15,9 @@
     "url": "https://github.com/a-zen/simple-server"
   },
   "dependencies": {
-    "express": "5.2.1"
+    "fastify": "^5.10.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
   }
 }
