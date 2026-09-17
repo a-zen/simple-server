@@ -1,11 +1,11 @@
-FROM node:26.9.0-alpine@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb AS builder
+FROM node:26.9.0-alpine@sha256:2c45bdcbf63561a54da9549612084b43ca309854a4110c87857d609ddeb61c9e AS builder
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY src ./src
 RUN npm run build
 
-FROM node:26.9.0-alpine@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+FROM node:26.9.0-alpine@sha256:2c45bdcbf63561a54da9549612084b43ca309854a4110c87857d609ddeb61c9e
 COPY --from=builder /app/dist/server.js /app/server.js
 WORKDIR /app
 RUN apk upgrade --no-cache
